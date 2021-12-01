@@ -74,10 +74,10 @@ Feel free to change and test the different values to achieve the best results fo
 
 # References
 
-[Gramformer - GitHub](https://github.com/PrithivirajDamodaran/Gramformer)
-[HappyTransformer - GitHub](https://github.com/EricFillion/happy-transformer)
+- [Gramformer - GitHub](https://github.com/PrithivirajDamodaran/Gramformer)
+- [HappyTransformer - GitHub](https://github.com/EricFillion/happy-transformer)
 
-[Gramformer - HuggingFace Model](https://huggingface.co/prithivida/grammar_error_correcter_v1)
-[Happy Transformer - Website](http://happytransformer.com/)
+- [Gramformer - HuggingFace Model](https://huggingface.co/prithivida/grammar_error_correcter_v1)
+- [Happy Transformer - Website](http://happytransformer.com/)
 
-[Gramformer: Correct Grammar With a Transformer Model](https://www.vennify.ai/gramformer-correct-grammar-transformer-nlp/)
+- [Gramformer: Correct Grammar With a Transformer Model](https://www.vennify.ai/gramformer-correct-grammar-transformer-nlp/)
