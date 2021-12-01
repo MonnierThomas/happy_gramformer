@@ -94,6 +94,8 @@ Feel free to change and test the different values to achieve the best results fo
 
 It's now a possibility to use Docker to run Happy Gramformer. Since Docker is not able to download the model from the internet via HuggingFace, we need the model to be saved in the model folder that you created before. 
   
+The model has not been upload on this repository because it is too heavy. But you need it locally for Docker to work.
+  
 Follow these steps in order to build:
 
 - `python3 src/main.py                                # it will save the model in the model directory` 
