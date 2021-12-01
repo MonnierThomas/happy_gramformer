@@ -3,7 +3,7 @@ from happytransformer import HappyTextToText
 from happytransformer import TTSettings
 
 class Model:
-    def __init__(self, transformer, model, do_sample=True, top_k=10, temperature=0.5,  min_length=1, max_length=100):
+    def __init__(self, transformer, model):
         try:
             self.happy_tt = HappyTextToText(load_path='model/')
             self.happy_tt.save("model/")
