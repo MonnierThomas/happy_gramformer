@@ -22,8 +22,8 @@ pip3 install requirements.txt
 Export the project to your PYTHONPATH.
 
 Create two folders at the root of the project: 
-- 'inputs' containing the batches of sentences you want to correct
-- 'results' to collect the results in csv files.
+- `inputs` containing the batches of sentences you want to correct
+- `results` to collect the results in csv files.
 
 # Quick start
 

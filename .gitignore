@@ -1,2 +1,4 @@
 results/*
 inputs/*
+model/*
+Dockerfile

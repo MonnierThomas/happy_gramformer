@@ -11,7 +11,7 @@ if __name__ == "__main__":
     parser.add_argument('--batch', nargs='+', help='enter the path of the batch you want to correct')
     parser.add_argument('--csv', help='enter 1 to save the corrections in a csv file')
     args = parser.parse_args()
-
+    
     model = Model("T5",  "prithivida/grammar_error_correcter_v1")
     correction = Correction()
     
