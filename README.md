@@ -101,7 +101,7 @@ Follow these steps in order to build:
   
 Then you can do whatever you want (from correcting sentences to batches and saving the results in csv files):
 Example:
-- `docker run happy_gramformer:latest --sentence 'I have bought an book .'
+- `docker run happy_gramformer:latest --sentence 'I have bought an book .`
 
 # References
 
