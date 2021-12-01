@@ -10,6 +10,7 @@ This repository provides an easy way to use the T5 Gramformer model for Grammati
 - [Quick Start](#quick-start)
 - [References](#references)
 - [Fine-tuning](#fine-tuning)
+- [Docker](#docker)
 
 # Installation
 
@@ -24,6 +25,7 @@ Export the project to your PYTHONPATH.
 Create two folders at the root of the project: 
 - `inputs` containing the batches of sentences you want to correct
 - `results` to collect the results in csv files.
+- `model` to store the model and use the dockerfile
 
 # Quick start
 
@@ -87,6 +89,19 @@ self.settings = TTSettings(num_beams=5,  min_length=1, max_length=100)
 ```
 
 Feel free to change and test the different values to achieve the best results for your domain.
+  
+# Docker
+
+It's now a possibility to use Docker to run Happy Gramformer. Since Docker is not able to download the model from the internet via HuggingFace, we need the model to be saved in the model folder that you created before. 
+  
+Follow these steps in order to build:
+
+- `python3 src/main.py                                # it will save the model in the model directory` 
+- `docker build . -t happy_gramformer --network=host  # it will build the docker image`
+  
+Then you can do whatever you want (from correcting sentences to batches and saving the results in csv files):
+Example:
+- `docker run happy_gramformer:latest --sentence 'I have bought an book .'
 
 # References
 
