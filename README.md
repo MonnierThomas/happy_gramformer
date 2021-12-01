@@ -24,7 +24,7 @@ Export the project to your PYTHONPATH.
 
 Create two folders at the root of the project: 
 - `inputs` containing the batches of sentences you want to correct
-- `results` to collect the results in csv files.
+- `results` to collect the results in csv files
 - `model` to store the model and use the dockerfile
 
 # Quick start
@@ -101,7 +101,7 @@ Follow these steps in order to build:
   
 Then you can do whatever you want (from correcting sentences to batches and saving the results in csv files):
 Example:
-- `docker run happy_gramformer:latest --sentence 'I have bought an book .`
+- `docker run happy_gramformer:latest --sentence 'I have bought an book .'`
 
 # References
 
