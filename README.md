@@ -65,7 +65,7 @@ time:  0.57 s
 
 <table> <thead> <tr> <th>Parameter</th> <th>Default</th> <th>Definition</th> </tr> </thead> <tbody> <tr> <td>min_length</td> <td>10</td> <td>Minimum number of generated tokens</td> </tr> <tr> <td>max_length</td> <td>50</td> <td>Maximum number of generated tokens</td> </tr> <tr> <td>do_sample</td> <td>False</td> <td>When True, picks words based on their conditional probability</td> </tr> <tr> <td>early_stopping</td> <td>False</td> <td>When True, generation finishes if the EOS token is reached</td> </tr> <tr> <td>num_beams</td> <td>1</td> <td>Number of steps for each search path</td> </tr> <tr> <td>temperature</td> <td>1.0</td> <td>How sensitive the algorithm is to selecting low probability options</td> </tr> <tr> <td>top_k</td> <td>50</td> <td>How many potential answers are considered when performing sampling</td> </tr> <tr> <td>top_p</td> <td>1.0</td> <td>Min number of tokens are selected where their probabilities add up to top_p</td> </tr> <tr> <td>no_repeat_ngram_size</td> <td>0</td> <td>The size of an n-gram that cannot occur more than once. (0=infinity)</td> </tr> </tbody> </table>
 
-We are currently using these parameters: 
+We are currently using these parameters in `src/model.py`: 
 ```
 self.settings = TTSettings(num_beams=5,  min_length=1, max_length=100)
 ```
