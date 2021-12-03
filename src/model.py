@@ -11,3 +11,10 @@ class Model:
             print('The model needs to be downloaded')
             self.happy_tt = HappyTextToText(transformer,  model)
         self.settings = TTSettings(num_beams=5,  min_length=1, max_length=100)
+
+    def loss(self, file):
+        '''
+        The input file must be tagged
+        '''
+        loss = self.happy_tt.eval(file)
+        return loss
