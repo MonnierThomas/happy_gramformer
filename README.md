@@ -23,7 +23,7 @@ pip3 install requirements.txt
 
 Export the project to your PYTHONPATH.
 
-Create two folders at the root of the project: 
+Create three folders at the root of the project: 
 - `inputs` containing the batches of sentences you want to correct
 - `results` to collect the results in csv files
 - `model` to store the model and use the dockerfile
@@ -33,17 +33,20 @@ Create two folders at the root of the project:
 With Happy Gramformer, you can use either correct sentences or batches.
 
 ```
-usage: main.py [-h] [--sentence SENTENCE [SENTENCE ...]] [--batch BATCH [BATCH ...]] [--csv CSV]
+usage: main.py [-h] [--sentence SENTENCE [SENTENCE ...]] [--batch BATCH [BATCH ...]] [--csv CSV] [--loss LOSS [LOSS ...]] [--finetune FINETUNE]
 
 Choose between sentence or batch correction
 
 optional arguments:
   -h, --help            show this help message and exit
   --sentence SENTENCE [SENTENCE ...]
-                        enter the sentence(s) you want to correct
+                        enter the sentence you want to correct
   --batch BATCH [BATCH ...]
-                        enter the path of the batch(es) you want to correct
+                        enter the path of the batch you want to correct
   --csv CSV             enter 1 to save the corrections in a csv file
+  --loss LOSS [LOSS ...]
+                        enter the path of the file(s) to get the loss of the model on it
+  --finetune FINETUNE   enter the path of the csv file for fine-tuning the model
 ```
   
 Examples: 
@@ -56,8 +59,8 @@ python3 src/main.py --sentence 'It issnot true' 'I bought an new book .'
 Original sentence:  It issnot true
 Corrected sentence:  It is not true.
 Correction:  True
-
 time:  0.56 s
+
 Original sentence:  I bought an new book .
 Corrected sentence:  I bought a new book.
 Correction:  True
@@ -93,7 +96,23 @@ Feel free to change and test the different values to achieve the best results fo
   
 # Fine-tuning
 
-Thanks to Eric Fillion's Happy Transformer package, it is very easy to fine-tune a T5 Transformer model for Grammatical Error Correction.
+Thanks to Eric Fillion's Happy Transformer package, it is very easy to fine-tune Gramformer for Grammatical Error Correction.
+  
+In order to fine-tune Gramformer, you need to build a dataset in a csv file with:
+  - `input` column containing source sentences with the prefix 'grammar: ' / example: 'grammar: I have bought an new book'
+  - `target` column containing one or more reference sentences
+  
+Then, run:
+```
+python3 src/main.py --finetune path_of_file.csv
+```
+  
+or:
+```
+docker run happy_transformer:latest --finetune path_of_file.csv'
+```
+
+The model will be saved in a folder `model_finetune_[datetime]`
   
 # Docker
 
