@@ -44,6 +44,8 @@ optional arguments:
   --batch BATCH [BATCH ...]
                         enter the path of the batch(es) you want to correct
   --csv CSV             enter 1 to save the corrections in a csv file
+  --loss LOSS [LOSS ...]
+                        enter the path of the file(s) to get the loss of the model on it
 ```
   
 Examples: 
