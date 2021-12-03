@@ -11,6 +11,7 @@ if __name__ == "__main__":
     parser.add_argument('--batch', nargs='+', help='enter the path of the batch you want to correct')
     parser.add_argument('--csv', help='enter 1 to save the corrections in a csv file')
     parser.add_argument('--loss', nargs='+', help='enter the path of the file(s) to get the loss of the model on it')
+    parser.add_argument('--finetune', help='enter the path of the csv file  for fine-tuning the model')
     args = parser.parse_args()
     
     model = Model("T5",  "prithivida/grammar_error_correcter_v1")
@@ -36,3 +37,7 @@ if __name__ == "__main__":
     if args.loss != 'None':
         for file in args.loss:
             print(model.loss(file))
+    
+    if args.finetune != 'None':
+        file = args.finetune
+        model.fine_tune(file)

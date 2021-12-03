@@ -1,6 +1,8 @@
 # Download the T5-Gramformer model and define the settings
 from happytransformer import HappyTextToText
 from happytransformer import TTSettings
+from happytransformer import TTTrainArgs
+from datetime import datetime
 
 class Model:
     def __init__(self, transformer, model):
@@ -18,3 +20,13 @@ class Model:
         '''
         loss = self.happy_tt.eval(file)
         return loss
+    
+    def fine_tune(self, file, batch_size=8):
+        '''
+        The input file must contain two columns: input and target
+        The input column must contain for every row 'grammar: {text}'
+        The target column can contain one or more suggestions of correction
+        '''
+        args = TTTrainArgs(batch_size=batch_size)
+        self.happy_tt.train(file, args=args)
+        self.happy_tt.save(f'model_finetuning_{datetime.now().strftime("%d-%m-%Y_%H-%M-%S")}/')
