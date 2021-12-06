@@ -34,10 +34,10 @@ if __name__ == "__main__":
         except:
             print("No inputs")
 
-    if args.loss != 'None':
+    if args.loss != None:
         for file in args.loss:
             print(model.loss(file))
     
-    if args.finetune != 'None':
+    if args.finetune != None:
         file = args.finetune
         model.fine_tune(file)
