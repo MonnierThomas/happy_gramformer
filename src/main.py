@@ -30,7 +30,7 @@ if __name__ == "__main__":
 
     if args.csv == '1':
         try:
-            create_csv(correction.original_sentences, correction.corrected_sentences, correction.is_correction, correction.too_long)
+            create_csv(correction, args.batch)
         except:
             print("No inputs")
 
