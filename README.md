@@ -12,6 +12,7 @@ This repository provides an easy way to use the T5 Gramformer model for Grammati
 - [Tuning](#tuning)
 - [Fine-tuning](#fine-tuning)
 - [Docker](#docker)
+- [References](#references)
 
 # Installation
 
