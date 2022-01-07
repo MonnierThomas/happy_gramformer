@@ -134,9 +134,7 @@ Example:
 
 - [Gramformer - GitHub](https://github.com/PrithivirajDamodaran/Gramformer)
 - [HappyTransformer - GitHub](https://github.com/EricFillion/happy-transformer)
-
 - [Gramformer - HuggingFace Model](https://huggingface.co/prithivida/grammar_error_correcter_v1)
 - [Happy Transformer - Website](http://happytransformer.com/)
-
 - [Gramformer: Correct Grammar With a Transformer Model](https://www.vennify.ai/gramformer-correct-grammar-transformer-nlp/)
 - [Fine-Tune a Transformer Model for Grammar Correction](https://www.vennify.ai/fine-tune-grammar-correction/)
